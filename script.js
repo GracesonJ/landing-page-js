@@ -30,11 +30,12 @@ class Landing {
         } else {
             if (regUser.value in this.database) {
                 alert(`Accound already exists`)
+                window.location = "index.html"
             } else {
                 this.database[regUser.value] = { username: regUser.value, password: regPwsd.value }
                 this.saveData()
                 alert(`Regstration Successfull`)
-                window.location = 'login.html'
+                window.location = 'index.html'
             }
 
         }
@@ -49,7 +50,7 @@ class Landing {
         } else {
             if (loginUser.value in this.database) {
                 if (this.database[loginUser.value].password == loginPswd.value) {
-                    localStorage.setItem("user", loginUser.value)
+                    localStorage.setItem("user",loginUser.value)
                     alert(`Login Successfull`)
                     window.location = "home.html"
                 } else {
@@ -58,7 +59,7 @@ class Landing {
                 }
             } else {
                 alert(`Account Doesnot exits, Please Register`);
-
+                
             }
         }
     }
