@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Application</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+     <!-- Fontawsome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header style="background-image: url(https://img.freepik.com/free-photo/programming-background-collage_23-2149901789.jpg); height: 400px; width: 100%;">
+        <nav class="navbar bg-transparent">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white fs-2 fw-semibold" href="#">
+                <i class="fa-solid fa-house"></i>
+                GRACE Landing Page
+              </a>
+              <button onclick="logout()" class="btn btn-outline-light"> <i class="fa-solid fa-power-off me-2"></i> Logout</button>
+            </div>
+          </nav>
+    </header>
+
+    <section>
+        <div class="container mt-5">
+            <h1 class="text-center mt-1 mb-4">
+                Welcome <span id="username" class="text-danger">User</span>
+            </h1>
+            <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis atque consectetur minima ea dolor dicta iste recusandae fuga beatae explicabo labore numquam esse laboriosam consequuntur corporis similique, dignissimos voluptate? Eaque molestiae omnis accusantium non atque corrupti a fugiat ratione, nostrum aliquid architecto dolorum eum nam fugit sunt velit dicta ut quibusdam nemo inventore quia magni. Beatae laboriosam, soluta sapiente provident debitis porro distinctio vero eos incidunt. Unde quia quis tempore obcaecati inventore, alias perferendis praesentium aspernatur nobis qui? Aut, aliquid accusamus. Nobis omnis in rem vero consequatur. Optio quasi possimus velit quis, ipsa illo atque. Sapiente aperiam ducimus velit nostrum quasi assumenda minima, odio mollitia quidem corporis! Illo ullam aliquid beatae sit quod corrupti architecto, quidem officiis vel molestiae. Qui rerum blanditiis dignissimos, dolor architecto sit iure consequatur ad alias nihil ipsa quasi nesciunt quae exercitationem ratione, neque quos tempore odit animi, autem velit hic necessitatibus. Voluptate nobis harum provident, modi cupiditate laboriosam aspernatur pariatur dicta laudantium molestias porro nesciunt iure recusandae. Commodi adipisci corrupti consequatur porro consectetur odio esse pariatur distinctio, ducimus veritatis? Maxime soluta adipisci rem eveniet unde ut earum! Incidunt recusandae odio ab dicta maxime natus ut architecto doloribus at dolore nobis quidem ad expedita sit, enim quas atque? Porro repudiandae, in, deleniti totam officia vero molestiae aperiam dignissimos qui odit explicabo, a eveniet. Rem corrupti totam vero eligendi ea repellendus corporis libero exercitationem cumque nobis molestiae, repellat ipsum doloribus iste deleniti facilis sit tempore aut vitae accusantium et. Rem nisi fuga odio dignissimos architecto! Molestias, debitis.</p>
+        </div>
+    </section>
+</body>
+<script>
+
+    let user = localStorage.getItem("user")
+    if(localStorage.getItem("user")){
+        username.innerHTML = user
+    }else{
+        alert(`Please Login`)
+        window.location = 'login.html'
+    }
+
+    function logout(){
+        localStorage.removeItem("user")
+        alert(`Logout Successfull`)
+        window.location= "login.html"
+    }
+</script>
+</html>
