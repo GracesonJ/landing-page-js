@@ -8,6 +8,7 @@ class Landing {
         "Aami": { username: "aami", password: "aami123" }
     }
 
+
     //method to store data
     saveData() {
         if (this.database) {
@@ -30,12 +31,12 @@ class Landing {
         } else {
             if (regUser.value in this.database) {
                 alert(`Accound already exists`)
-                window.location = "index.html"
+                window.location = "login.html"
             } else {
                 this.database[regUser.value] = { username: regUser.value, password: regPwsd.value }
                 this.saveData()
                 alert(`Regstration Successfull`)
-                window.location = 'index.html'
+                window.location = 'login.html'
             }
 
         }
@@ -64,7 +65,6 @@ class Landing {
         }
     }
 }
-
 const obj = new Landing()
 
 obj.getData()
